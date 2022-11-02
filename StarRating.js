@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { saveRating } from "./store/action";
 
 const StarRating = ({ selectedLabourId }) => {
+  // rating value from redux
   const ratingObj = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -11,6 +12,7 @@ const StarRating = ({ selectedLabourId }) => {
     <View style={styles.main}>
       <Text style={styles.feedback}>Feedback</Text>
       <View style={{ display: "flex", flexDirection: "row" }}>
+        {/* display 5 stars */}
         {[...Array(5)].map((star, index) => {
           index += 1;
           return (
@@ -22,6 +24,7 @@ const StarRating = ({ selectedLabourId }) => {
               }}
             >
               <Text
+                //   color only the items according to the rating
                 style={
                   index <=
                   ratingObj?.reduce((acc, item) => {
@@ -32,6 +35,7 @@ const StarRating = ({ selectedLabourId }) => {
                     : styles.starRegular
                 }
               >
+                {/* HTML code for star */}
                 &#9733;
               </Text>
             </Pressable>
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
     border: "1px solid yellow",
   },
   starSelected: {
-    color: "yellow",
+    color: "#faca07",
     fontSize: 30,
   },
   starRegular: {

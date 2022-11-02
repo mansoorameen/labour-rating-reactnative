@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "buildNextAssignment",
+    "name": "Labour Info",
     "slug": "buildNextAssignment",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,13 +14,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "labours.info",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
